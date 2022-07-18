@@ -11,7 +11,7 @@ public:
     Circulo(int xpos, int ypos);
 
     QColor m_color;
-    int m_dim;
+    int m_dimensiones;
 
 private:
     void subir();

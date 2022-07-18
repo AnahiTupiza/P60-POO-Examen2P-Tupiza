@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QPainter>
 #include <QDialog>
+#include<QDebug>
 
 
 #include <QPoint>
