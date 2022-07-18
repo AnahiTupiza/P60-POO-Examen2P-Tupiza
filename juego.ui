@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>Juego</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="imagenes/Recursos.qrc">
+    <normaloff>:/new/prefix1/gameboy.png</normaloff>:/new/prefix1/gameboy.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
@@ -92,17 +96,18 @@
      </item>
     </layout>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="outCuadro">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>481</width>
-      <height>251</height>
+      <width>491</width>
+      <height>261</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-color: rgb(46, 52, 54);</string>
+     <string notr="true">border-color: rgb(46, 52, 54);
+background-color: rgb(211, 215, 207);</string>
     </property>
     <property name="text">
      <string>TextLabel</string>
@@ -140,6 +145,8 @@
    </property>
   </action>
  </widget>
- <resources/>
+ <resources>
+  <include location="imagenes/Recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>

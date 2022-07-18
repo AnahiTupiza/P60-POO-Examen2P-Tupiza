@@ -2,7 +2,11 @@
 #define JUEGO_H
 
 #include <QMainWindow>
-#include <QDebug>
+#include <QPainter>
+#include <QDialog>
+
+
+#include <QPoint>
 #include "configuracion.h"
 #include "circulo.h"
 
@@ -17,6 +21,9 @@ class Juego : public QMainWindow
 public:
     Juego(QWidget *parent = nullptr);
     ~Juego();
+
+protected:
+    void paintEvent(QPaintEvent *event) override;
 
 private slots:
     void on_btnArriba_released();
@@ -34,5 +41,20 @@ private slots:
 private:
     Ui::Juego *ui;
     Circulo *m_circulo;
+    QPixmap lienzo;
+
+    void dibujar();
+    int getAlto(int valor);
+    int incY(int alto);
+
+    QImage *mImagen;
+    QPainter *mPainter;
+    QPoint mInicial;
+    QPoint mFinal;
+    QPoint mCentro;
+    int mAncho;
+    QColor mColor;
+
+
 };
 #endif // JUEGO_H
